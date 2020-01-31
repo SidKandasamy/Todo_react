@@ -30,11 +30,12 @@ class App extends Component {
 
   render() {
 
+    //todo is a prop
     return(
       <div className="App">
 
-        <Todo/>
-
+        <Todo todo={this.state.todo}/> 
+        
       </div>
     );
     }
