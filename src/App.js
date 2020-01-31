@@ -1,15 +1,43 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Todo from './components/Todo'
 
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>My app</h1>
-      <Todo/>
-    </div>
-  );
+class App extends Component {
+
+  state = {
+    todo:[
+      {
+        id:1,
+        title:'take out the trash',
+        completed: false,
+      },
+
+      {
+        id:2,
+        title:'Buy food',
+        completed: true,
+      },
+
+      {
+        id:1,
+        title:'feed cat',
+        completed: false,
+      }
+    ]
+  }
+
+
+  render() {
+
+    return(
+      <div className="App">
+
+        <Todo/>
+
+      </div>
+    );
+    }
 }
 
 export default App;
