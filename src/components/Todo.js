@@ -1,12 +1,15 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 
-function Todo() {
-  return (
-    <div>
-      <h1>ToDo</h1>
-    </div>
-  );
+class Todo extends Component {
+    render(){
+
+//you can check the props console.log(this.props.todo)
+    return this.props.todo.map(todo => (
+            <h3>{todo.title}</h3> //map method on the todo props which loops through and gets out the title
+    ));
+ }
 }
+
 
 export default Todo;
