@@ -35,6 +35,14 @@ export class TodoItem extends Component {
         )
     }
 }
-
-
 export default TodoItem
+
+//Climbing the Tree, acessing and changing state
+
+//to access the state which is in App.js, from ToDoItems, you access the props from the Todo.js. The Todo.js includes the <TodoItem> which has the props. 
+
+//then from there, props are still only accessible in the App.js, so from Todo.js, you need to then acess app.js
+
+//markComplete={this.markComplete} within the Component and create the function/method   markComplete = (e) => {
+    //console.log("hello")
+//}
