@@ -11,13 +11,13 @@ class App extends Component {
       {
         id:1,
         title:'take out the trash',
-        completed: false,
+        completed: true,
       },
 
       {
         id:2,
         title:'Buy food',
-        completed: true,
+        completed: false,
       },
 
       {
@@ -28,6 +28,9 @@ class App extends Component {
     ]
   }
 
+  markComplete = (e) => {
+    console.log("hello")
+}
 
   render() {
 
@@ -35,7 +38,7 @@ class App extends Component {
     return(
       <div className="App">
 
-        <Todo todo={this.state.todo}/> 
+        <Todo todo={this.state.todo} markComplete={this.markComplete}/> 
         
       </div>
     );
