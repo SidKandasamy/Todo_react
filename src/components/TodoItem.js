@@ -8,19 +8,29 @@ export class TodoItem extends Component {
             return {
                 textDecoration:'line-through',
                 backgroundColor: 'green',
+                padding: '10px',
+                borderBottom: '1px solid #ccc',
             }
         } else {
             return{
                 textDecoration: 'none',
                 backgroundColor: 'none',
+                padding: '10px',
+                borderBottom: '1px solid #ccc',
             }
         }
     }
 
+   
+
     render() {
         return (
             <div style={this.getStyle()}>
-                <p>{this.props.todo.title}</p> 
+                
+                <p>
+                <input type="checkbox" onChange={this.props.markComplete}/> {''}
+                {this.props.todo.title}
+                </p> 
             </div>
         )
     }
