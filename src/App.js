@@ -11,13 +11,13 @@ class App extends Component {
       {
         id:1,
         title:'take out the trash',
-        completed: false,
+        completed: true,
       },
 
       {
         id:2,
         title:'Buy food',
-        completed: true,
+        completed: false,
       },
 
       {
