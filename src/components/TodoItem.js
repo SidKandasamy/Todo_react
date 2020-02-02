@@ -14,7 +14,7 @@ export class TodoItem extends Component {
         } else {
             return{
                 textDecoration: 'none',
-                backgroundColor: 'none',
+                backgroundColor: 'red',
                 padding: '10px',
                 borderBottom: '1px solid #ccc',
             }
@@ -24,12 +24,16 @@ export class TodoItem extends Component {
    
 
     render() {
+
+        const {id,title} = this.props.todo; //deconstruction, so we can use id and title within the jsx
+
         return (
             <div style={this.getStyle()}>
                 
                 <p>
-                <input type="checkbox" onChange={this.props.markComplete}/> {''}
-                {this.props.todo.title}
+                <input type="checkbox" onChange={this.props.markComplete.bind
+                (this,id)}/> {''}
+                {title}
                 </p> 
             </div>
         )
@@ -46,3 +50,7 @@ export default TodoItem
 //markComplete={this.markComplete} within the Component and create the function/method   markComplete = (e) => {
     //console.log("hello")
 //}
+
+//Changing State
+
+//
