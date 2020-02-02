@@ -21,11 +21,22 @@ export class TodoItem extends Component {
         }
     }
 
+    
+
+
    
 
     render() {
 
         const {id,title} = this.props.todo; //deconstruction, so we can use id and title within the jsx
+
+        const btnStyle = {
+            backgroundColor: 'blue',
+            padding: '5px 10px',    
+            border: 'none',
+            borderRadius: '50%',
+            float:'right',
+        }
 
         return (
             <div style={this.getStyle()}>
@@ -34,10 +45,11 @@ export class TodoItem extends Component {
                 <input type="checkbox" onChange={this.props.markComplete.bind
                 (this,id)}/> {''}
                 {title}
-                <input type="checkbox"/>
+                <button style={btnStyle}  type="checkbox"/>
                 </p> 
             </div>
         )
+        
     }
 }
 export default TodoItem
