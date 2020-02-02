@@ -38,13 +38,19 @@ class App extends Component {
     }) });
 }
 
+buttonClicked = (id) => {
+  this.setState({todo:this.state.todo.filter(todo => todo.id !== id)});
+}
+
+
+
   render() {
 
     //todo is a prop
     return(
       <div className="App">
 
-        <Todo todo={this.state.todo} markComplete={this.markComplete}/> 
+        <Todo todo={this.state.todo} buttonClicked={this.buttonClicked} markComplete={this.markComplete}/> 
         
       </div>
     );
