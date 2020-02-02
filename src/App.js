@@ -21,7 +21,7 @@ class App extends Component {
       },
 
       {
-        id:1,
+        id:3,
         title:'feed cat',
         completed: false,
       }
@@ -34,7 +34,7 @@ class App extends Component {
         todo.completed = !todo.completed
       }
         return todo;
-    })});
+    }) });
 }
 
   render() {
