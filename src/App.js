@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Todo from './components/Todo'
 import Header from './components/layout/Header'
+import Addform from './components/layout/Addform'
 
 
 import './App.css';
@@ -52,6 +53,7 @@ buttonClicked = (id) => {
       <div className="App">
 
         <Header></Header>
+        <Addform/>
         <Todo todo={this.state.todo} buttonClicked={this.buttonClicked} markComplete={this.markComplete}/> 
      
         
