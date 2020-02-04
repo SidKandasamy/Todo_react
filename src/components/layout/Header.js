@@ -9,7 +9,11 @@ function Header() {
 }
 
 const headerStyle = {
-    backgroundColor: 'pink',
+    backgroundColor: 'grey',
+    color:'white',
+    textAlign: 'center',
+    padding: '10px',
+    borderBottom: '1px solid #ccc',
 }
 
 
