@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Todo from './components/Todo'
 import Header from './components/layout/Header'
+import Addform from './components/layout/Addform'
+import uuid from 'uuid';
 
 
 import './App.css';
@@ -10,19 +12,19 @@ class App extends Component {
   state = {
     todo:[
       {
-        id:1,
+        id:uuid.v4(),
         title:'take out the trash',
         completed: false,
       },
 
       {
-        id:2,
+        id:uuid.v4(),
         title:'Buy food',
         completed: false,
       },
 
       {
-        id:3,
+        id:uuid.v4(),
         title:'feed cat',
         completed: false,
       }
@@ -39,10 +41,25 @@ class App extends Component {
     }) });
 }
 
+//delete todo
 buttonClicked = (id) => {
   this.setState({todo:this.state.todo.filter(todo => todo.id !== id)});
 }
 
+  addForm = (title) =>{
+
+    const newTodo ={
+      id:uuid.v4(),
+      title,
+      completed: false,
+
+    }
+
+    this.setState({todo:[...this.state.todo, newTodo]})
+
+    //this.setState changes the state to our newTodo, whic is a variable
+    //uuid.v4 is a plugin which gives us different ID numbers
+  }
 
 
   render() {
@@ -50,11 +67,11 @@ buttonClicked = (id) => {
     //todo is a prop
     return(
       <div className="App">
-
+        <div className="container">
         <Header></Header>
+        <Addform addForm={this.addForm}/>
         <Todo todo={this.state.todo} buttonClicked={this.buttonClicked} markComplete={this.markComplete}/> 
-     
-        
+        </div>
       </div>
     );
     }
