@@ -51,12 +51,11 @@ buttonClicked = (id) => {
     //todo is a prop
     return(
       <div className="App">
-
+        <div class="container">
         <Header></Header>
         <Addform/>
         <Todo todo={this.state.todo} buttonClicked={this.buttonClicked} markComplete={this.markComplete}/> 
-     
-        
+        </div>
       </div>
     );
     }
