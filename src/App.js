@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Todo from './components/Todo'
+import Header from './components/layout/Header'
 
 
 import './App.css';
@@ -50,7 +51,9 @@ buttonClicked = (id) => {
     return(
       <div className="App">
 
+        <Header></Header>
         <Todo todo={this.state.todo} buttonClicked={this.buttonClicked} markComplete={this.markComplete}/> 
+     
         
       </div>
     );
