@@ -56,6 +56,9 @@ buttonClicked = (id) => {
     }
 
     this.setState({todo:[...this.state.todo, newTodo]})
+
+    //this.setState changes the state to our newTodo, whic is a variable
+    //uuid.v4 is a plugin which gives us different ID numbers
   }
 
 
